@@ -54,7 +54,7 @@ jobs:
     #   modify them (or add more) to build your code if your project, please refer to the EXAMPLE below for guidance.
 
     - name: Build Project
-       run:|
+      run: |
         sudo apt -y install qtbase5-dev libqt5svg5-dev libqt5websockets5-dev libqt5opengl5-dev libqt5x11extras5-dev libprotoc-dev libzmq3-dev
         cmake -S src/PlotJuggler -B build/PlotJuggler -DCMAKE_INSTALL_PREFIX=install
         cmake --build build/PlotJuggler --config RelWithDebInfo --parallel --target install
